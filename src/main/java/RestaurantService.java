@@ -31,4 +31,10 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
+
+    public int returns_Total_Order_Value_For_Selected_Menu_Items(Restaurant restaurant,List<String> selectedMenuItems){
+        int totalValue=0;
+
+        return totalValue;
+    }
 }

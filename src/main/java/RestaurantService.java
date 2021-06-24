@@ -34,7 +34,13 @@ public class RestaurantService {
 
     public int returns_Total_Order_Value_For_Selected_Menu_Items(Restaurant restaurant,List<String> selectedMenuItems){
         int totalValue=0;
-
+        for(String menuItems:selectedMenuItems){
+            for(Item item: restaurant.getMenu()){
+                if(item.getName().equals(menuItems)){
+                    totalValue +=item.getPrice();
+                }
+            }
+        }
         return totalValue;
     }
 }
